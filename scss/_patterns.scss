@@ -2,6 +2,12 @@ h1 {
     font-size: 12.4rem;
     font-weight: 700;
     line-height: 97.5%;
+    @media(max-width: 1200px) {
+        font-size: 10rem;
+    }
+    @media(max-width: 560px) {
+        font-size: 6rem;
+    }
 }
 
 h2 {
@@ -27,6 +33,19 @@ p {
         font-weight: 500;
         line-height: 2.2rem;
     }
+    @media(max-width: 1200px) {
+        span {
+            font-size: 1.8rem;
+        }
+    }
+    @media(max-width: 991px) {
+        justify-content: center;
+    }
+    @media(max-width: 560px) {
+        span {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 .card-character {
@@ -34,13 +53,16 @@ p {
     max-width: 38.4rem;
     .image {
         width: 100%;
-        height: 52rem;
+        height: 48rem;
         margin-bottom: 2.4rem;
         position: relative;
         display: flex;
         justify-content: center;
         overflow: hidden;
         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: transform .3s ease;
         }
         button {
@@ -76,6 +98,11 @@ p {
                 opacity: 1;
                 bottom: 5.7rem;
             }
+        }
+    }
+    @media(max-width: 991px) {
+        .image {
+            height: 44rem;
         }
     }
 }
